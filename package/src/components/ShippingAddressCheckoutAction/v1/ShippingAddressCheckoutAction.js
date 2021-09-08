@@ -178,8 +178,9 @@ class ShippingAddressCheckoutAction extends Component {
   set setFormErrors(formErrors) {
     this.setState({ formErrors });
   }
+  isFormFilled = (values) => {return true};
 
-  isFormFilled = (values) => Object.keys(values).every((key) => (key === "address2" || key === "company" ? true : values[key] !== null));
+//   isFormFilled = (values) => Object.keys(values).every((key) => (key === "address2" || key === "company" ? true : values[key] !== null));
 
   submit = () => {
     this._form.submit();
